@@ -1,0 +1,155 @@
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.carousel-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  display: flex;
+  min-height: 300px;
+}
+
+.card-image {
+  flex: 0 0 40%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-text {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.card-button {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.card-button:hover {
+  background: #007bff;
+  color: white;
+}
+
+.carousel-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.progress-segment {
+  flex: 1;
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 2.5px;
+  transition: background-color 0.3s ease;
+}
+
+.progress-segment.active {
+  background-color: #0056b3;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #f8f9fa;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+  background: #e9ecef;
+  transform: scale(1.05);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+  }
+  
+  .card-image {
+    flex: none;
+    padding: 20px 20px 0 20px;
+  }
+  
+  .card-text {
+    padding: 20px;
+  }
+  
+  .carousel-navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .progress-bar {
+    margin-right: 0;
+  }
+} 
